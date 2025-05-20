@@ -1,0 +1,172 @@
+<!doctype html>
+
+<head>
+    <title>Hangman</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-hangman.ico">
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hangman-style.css" rel="stylesheet">
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Games</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="crystal.html">Crystal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trivia.html">Trivia</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hangman.html">Hangman</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fight.html">Boss</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <br>
+    <div class="container d-flex justify-content-center align-items-center full-height">
+        <div class="text-center">
+            <h3 class="display-4">Let's Play Hangman</h3>
+            <p class="lead">This is a simple game of Hangman. You've played Hangman before, right?
+                Well, in this game, the player
+                chooses letters to
+                guess the hidden word. Simply click a letter or type on your keyboard to start. If you have already used a letter, 
+                it won't be repeated so don't worry about miss clicking the same letter twice, but if you click the wrong letter, you will lose a life.
+                Good Luck!</p>
+
+        </div>
+    </div>
+
+    
+
+
+
+
+    <div class="container ">
+        <div class="row center">
+            <div id="game">
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="grid-box"> <p id="lives">Lives: <span id="livesCount"></span></p></div>
+                        <p id="wrongGuesses">Wrong Letters: <span id="wrongLetters"></span></p>
+                        <p id="wordDisplay"></p>
+                        
+                    </div>
+                
+                    <div class="col-md-6">
+                        <div class="grid-box">  <div id="letters"></div> </div>
+                    </div>
+                
+                </div>
+
+                <div class="row justify-content-center align-items-center full-height">
+
+                    
+                    <p id="message"></p>
+        
+
+             
+                </div>
+                <div class="row justify-content-center align-items-center full-height">
+
+                    
+                
+                    <!-- <button id="restartBtn" style="display:none; margin-top: 5px;">Restart</button> -->
+                    <!-- <div id="messagePick"> </div> -->
+
+             
+                </div>
+              
+                
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="game-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"> <!-- Add this class -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Game Results</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-text">
+              <!-- Results text will go here -->
+            </div>
+            <div class="modal-footer">
+              <button id="continue" class="btn btn-primary">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+  
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center text-lg-start p-3">
+        <div class="container py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <span>&copy; Jess M. Design 2025</span>
+            <div class="my-3">
+                <a href="https://github.com/Jess-M-Design" class="text-white me-3"><i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://dribbble.com/J_M_Design" class="text-white me-3"><i class="fa-brands fa-dribbble fa-xl"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                <a href="https://www.behance.net/jess_m_design" class="text-white"><i class="fa-brands fa-behance fa-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Modal -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <p id="modalMessage"></p>
+      <button id="modalRestartBtn">Restart</button>
+      <button id="modalNextBtn"><a href="fight.html">Next Game</a>
+      </button>
+    </div>
+  </div>
+  
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/hangman-game.js"></script>
+
+      
+</body>
