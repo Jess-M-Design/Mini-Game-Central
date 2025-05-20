@@ -1,0 +1,37 @@
+{
+  "name": "theultimategame",
+  "version": "1.0.0",
+  "description": "As it's name suggests, this is the ultimate JavaScript RPG: A quest for love, for loyalty, for redemption.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "latest",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.37.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawnwages/TheUltimateGame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dawnwages/TheUltimateGame/issues"
+  },
+  "homepage": "https://github.com/dawnwages/TheUltimateGame#readme"
+}
