@@ -6,6 +6,6 @@
 - HTML, CSS, Javascript, Modal, Bootstrap
 
 ## Live link:
-- link: https://Jess-M-Design.github.io/Mini-Game-Central/index.html
+- link: https://Jess-M-Design.github.io/Mini-Game-Central/public/index.html
 
 
