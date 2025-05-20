@@ -1,4 +1,4 @@
-# Crystal-Collector
+# Mini Game Central
 
 - In this game, the player will have to guess the answer, just like in Hangman. However, the player will guess which numbers instead of letters.
 
