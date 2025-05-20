@@ -1,0 +1,169 @@
+/* ============================  CRYSTAL GAME  ========================== */
+
+#crystalgame {
+  background-image: url(../images/pixelated_bg600.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #212121;
+  border: solid 10px #555;
+  box-shadow: 0px 0px 20px #999;
+  border-radius: 5px;
+  max-width: 960px;
+  height: 600px;
+  margin: 30px auto 50px auto;
+  padding: 2rem;
+
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  grid-template-areas:
+    "c1 c2 c3 c4"
+    "random random user user";
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Assign grid areas */
+#crystal-one { grid-area: c1; }
+#crystal-two { grid-area: c2; }
+#crystal-three { grid-area: c3; }
+#crystal-four { grid-area: c4; }
+.randomNumber { grid-area: random; }
+.userNumber { grid-area: user; }
+
+/* Crystal buttons */
+.crystal {
+  background-color: #ccc;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* Crystal images */
+.crystalimg {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Score panels */
+.randomNumber,
+.userNumber {
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 2rem;
+}
+
+.panel-body {
+  font-size: 40px;
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 600px) {
+  #crystalgame {
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "random user";
+  }
+
+  .crystal {
+    max-width: 120px;
+  }
+
+  .randomNumber,
+  .userNumber {
+    max-width: 120px;
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+/* General styling */
+.panel-heading h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.pTwo {
+
+  font-size: 40px;
+
+}
+
+section {
+  height: auto;
+}
+
+.lead {
+  color: white;
+  text-align: center;
+  margin-top: 103px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.modal-content {
+  background: #6d6d6d;
+}
+
+.modal-header {
+  background-color: rgb(190, 76, 41);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal-body {
+  color: white;
+}
+
+
+
+
+
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+h4 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+.lead {
+  color: white;
+  text-align: center;
+  margin-top: 103px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+
+.modal-content {
+  background: #6d6d6d;
+}
+
+.modal-header {
+  background-color: rgb(190, 76, 41);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal-body {
+  color: white;
+}

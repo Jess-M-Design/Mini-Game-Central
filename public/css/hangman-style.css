@@ -1,0 +1,169 @@
+
+  
+  #game {
+    margin-top: 50px;
+    background-image: url(../images/pixelated_bg5.gif);
+  
+    height: 600px;
+    width: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+    border: solid 10px #555;
+    box-shadow: 0px 0px 20px #999;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  
+  #wordDisplay {
+    font-size: 2em;
+    letter-spacing: 8px;
+    background-color: #ffffffc2;
+    border-radius: 15px;
+    /* margin-top: 25%; */
+    /* width: 50%; */
+
+  }
+  
+  #wrongGuesses {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #d33;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+    text-align: left;
+    /* width: 300px; */
+  
+  }
+
+  #lives {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+    max-width: 121px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+  }
+  
+  #letters {
+    margin-top: 40px;
+    margin-left: 157px;
+ 
+  }
+  
+  #letters button {
+    height: 50px;
+    width: 50px;
+    margin: 3px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #464334;
+    border-radius: 50px;
+    background-color: #7DAB87;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #letters button:disabled {
+    background-color: #cccccc52;
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.418);
+  }
+  
+  #message {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    color: black;
+    border-radius: 15px;
+    margin-top: 160px;
+    width: 300px;
+  }
+
+
+  
+  @media screen and (max-width: 766px) {
+    #letters {
+        /* margin-top: 20px; */
+        margin-left: 0px;
+     
+      }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-content {
+    background-color: #464334;
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+  }
+  
+  #modalRestartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #modalRestartBtn:hover {
+    background-color: #007bff;
+  }
+  
+  #modalNextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: firebrick;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #modalNextBtn:hover {
+    background-color: rgb(218, 44, 44);
+    color: white;
+  }
+
+  #modalNextBtn a {
+    color: white;
+  }
