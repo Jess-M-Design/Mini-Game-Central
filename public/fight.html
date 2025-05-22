@@ -66,7 +66,7 @@
                             <h2 id="char-name">Our Hero</h2>
 
                         </div>
-                      
+
                         <div class="hp-bar">
                             <div id="user-hp-bar" class="hp-fill"></div>
                         </div>
@@ -89,12 +89,13 @@
                         </div>
                         <p class="player">Boss HP: <span id="boss-hp"></span></p>
 
-                        <img id="boss-img" src="https://www.behance.net/gallery/141516201/Ryu-Stance/modules/799532961" alt="Boss">
+                        <img id="boss-img" src="https://www.behance.net/gallery/141516201/Ryu-Stance/modules/799532961"
+                            alt="Boss">
 
                     </div>
 
                 </div>
-<br>
+
                 <!-- <div class="row justify-content-center align-items-center full-height">
 
                     <div class="col-sm-3">
@@ -110,7 +111,9 @@
 
                     <div class="col-sm-3">
 
-                        <button id="special">Special <img class="ability" src="images/special.png" alt="magic"></button>
+                        <button id="special">
+                            <span class="button_top"> Special <img class="ability" src="images/special.png" alt="magic"></span>
+                          </button>
                     </div>
 
 
@@ -120,13 +123,36 @@
                 <div class="row justify-content-center align-items-center full-height">
                     <div id="turn-indicator">🟢 Your Turn!</div>
 
-                    <button id="attack">Attack <img class="ability" src="images/sword.png" alt="attack"></button>
+                    <!-- <button id="attack">Attack <img class="ability" src="images/sword.png" alt="attack"></button>
                     <button id="potion">Potion <img class="ability" src="images/potion.png" alt="potion">
+                    </button> -->
+
+                    <!-- <button id="special">Special <img class="ability" src="images/special.png" alt="magic"></button> -->
+                    <button id="attack">
+                        <span class="button_top">Attack
+                            <img src="images/sword.png" alt="icon" class="ability">
+
+                        </span>
                     </button>
 
-                    <button id="special">Special <img class="ability" src="images/special.png" alt="magic"></button>
+                    <button id="potion">
+                        <span class="button_top">Potion
+                            <img src="images/potion.png" alt="icon" class="ability">
 
-                
+                        </span>
+                    </button>
+
+                    <button id="special">
+                        <span class="button_top">Special
+                            <img src="images/special.png" alt="icon" class="ability">
+
+                        </span>
+                    </button>
+
+
+
+
+
 
                 </div>
 
@@ -139,7 +165,7 @@
 
     <br><br><br><br>
 
-    <div id="resultModal" class="modal" style="display: block;">
+    <div id="resultModal" style="display: none;">
         <div class="modal-content">
             <span id="closeModal" class="close">×</span>
             <p id="modalMessage">You win!</p>
