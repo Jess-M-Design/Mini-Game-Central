@@ -73,6 +73,47 @@ height: auto;
 }
 
 #attack {
+	--button_radius: 0.75em;
+	--button_color: #ffffff;
+	--button_outline_color: #000000;
+  
+	border: none;
+	cursor: pointer;
+	border-radius: var(--button_radius);
+	background: var(--button_outline_color);
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	max-width: 130px;
+	padding: 0;
+	margin: 15px;
+	position: relative;
+	display: inline-block;
+  }
+  
+  #attack .button_top {
+	
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border: 2px solid var(--button_outline_color);
+	border-radius: var(--button_radius);
+	background: var(--button_color);
+	color: var(--button_outline_color);
+	transform: translateY(-0.2em);
+	transition: transform 0.1s ease;
+	
+  }
+  
+  #attack:hover .button_top {
+	transform: translateY(-0.33em);
+  }
+  
+  #attack:active .button_top {
+	transform: translateY(0);
+  }
+
+/* #attack {
 	color: black;
 	font-weight: bold;
 	font-size: 20px;
@@ -82,32 +123,118 @@ height: auto;
 	background-color: #ffffff;
 	margin-left: 15px;
 	margin-right: 15px;
-}
+} */
+
+/* #potion {
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 15px;
+	max-width: 130px;
+	align-items: center !important;
+	background-color: #ffffff;
+	margin-left: 15px;
+	margin-right: 15px;
+} */
 
 #potion {
+	--button_radius: 0.75em;
+	--button_color: #ffffff;
+	--button_outline_color: #000000;
+  
+	border: none;
+	cursor: pointer;
+	border-radius: var(--button_radius);
+	background: var(--button_outline_color);
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	max-width: 130px;
+	padding: 0;
+	margin: 15px;
+	position: relative;
+	display: inline-block;
+  }
+  
+  #potion .button_top {
+	
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border: 2px solid var(--button_outline_color);
+	border-radius: var(--button_radius);
+	background: var(--button_color);
+	color: var(--button_outline_color);
+	transform: translateY(-0.2em);
+	transition: transform 0.1s ease;
+	
+  }
+  
+  #potion:hover .button_top {
+	transform: translateY(-0.33em);
+  }
+  
+  #potion:active .button_top {
+	transform: translateY(0);
+  }
+  
+
+/* #special {
 	color: black;
 	font-weight: bold;
 	font-size: 20px;
 	border-radius: 15px;
 	max-width: 130px;
 	align-items: center !important;
-	background-color: #ffffff;
+	background-color: #000000;
 	margin-left: 15px;
 	margin-right: 15px;
-}
+
+} */
 
 #special {
+	--button_radius: 0.75em;
+	--button_color: #ffffff;
+	--button_outline_color: #000000;
+  
+	border: none;
+	cursor: pointer;
+	border-radius: var(--button_radius);
+	background: var(--button_outline_color);
 	color: black;
 	font-weight: bold;
 	font-size: 20px;
-	border-radius: 15px;
 	max-width: 130px;
-	align-items: center !important;
-	background-color: #ffffff;
-	margin-left: 15px;
-	margin-right: 15px;
-
-}
+	padding: 0;
+	margin: 15px;
+	position: relative;
+	display: inline-block;
+  }
+  
+  #special .button_top {
+	
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border: 2px solid var(--button_outline_color);
+	border-radius: var(--button_radius);
+	background: var(--button_color);
+	color: var(--button_outline_color);
+	transform: translateY(-0.2em);
+	transition: transform 0.1s ease;
+	
+  }
+  
+  #special:hover .button_top {
+	transform: translateY(-0.33em);
+  }
+  
+  #special:active .button_top {
+	transform: translateY(0);
+  }
+  
+ 
+  
 
 .ability {
 	display: flex;
@@ -185,6 +312,68 @@ img {
 
 }
 
+.modal-content {
+	background: #6d6d6d;
+  }
+  
+  .modal-header {
+	background-color: rgb(190, 76, 41);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .modal-body {
+	color: white;
+  }
+
+  /* From Uiverse.io by Voxybuns */ 
+button {
+	/* Variables */
+	--button_radius: 0.75em;
+	--button_color: #e8e8e8;
+	--button_outline_color: #000000;
+
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: var(--button_radius);
+	background: var(--button_outline_color);
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 15px;
+	max-width: 130px;
+	align-items: center !important;
+	
+	margin-left: 15px;
+	margin-right: 15px;
+  }
+  
+  .button_top {
+	display: block;
+	box-sizing: border-box;
+	border: 2px solid var(--button_outline_color);
+	border-radius: var(--button_radius);
+	/* padding: 0.75em 1.5em; */
+	background: var(--button_color);
+	color: var(--button_outline_color);
+	transform: translateY(-0.2em);
+	transition: transform 0.1s ease;
+	max-width: 130px;
+	align-items: center !important;
+
+  }
+  
+  button:hover .button_top {
+	/* Pull the button upwards when hovered */
+	transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+	/* Push the button downwards when pressed */
+	transform: translateY(0);
+  }
+  
+
 @media screen and (max-width: 766px) {
     #letters {
         /* margin-top: 20px; */
@@ -193,5 +382,85 @@ img {
       }
   }
 
+  @media (max-width: 600px) {
+	img {
+		height: 70px;
+		width: 70px;
+	
+	}
+	
+	#potion {
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 15px;
+		max-width: 100px;
+		align-items: center !important;
+		background-color: #ffffff;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 
+	#special {
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 15px;
+		max-width: 100px;
+		align-items: center !important;
+		background-color: #ffffff;
+		margin-left: 5px;
+		margin-right: 5px;
+	
+	}
+
+	#attack {
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 15px;
+		max-width: 100px;
+		align-items: center !important;
+		background-color: #ffffff;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	#boss-img {
+	
+		width: 170px;
+		height: auto;
+		transform: scaleX(-1);
+	}
+
+	#user-img {
+		margin-top: 130px;
+		width: 140px;
+		height: auto;
+	}
+
+	.bossBG {
+		margin-top: 50px;
+		/* background-image: url(../images/pixelated_bg6.gif); */
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/pixelated_bg6.gif);
+		height: 520px;
+		width: 960px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		background-color: #212121;
+		border: solid 10px #555;
+		box-shadow: 0px 0px 20px #999;
+		border-radius: 5px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 50px;
+		margin-top: 30px;
+	}
+  }
+
+
+  #resultModal {
+	display: none;
+  }
   

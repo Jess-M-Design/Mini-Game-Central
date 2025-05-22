@@ -155,15 +155,3 @@ h4 {
 }
 
 
-.modal-content {
-  background: #6d6d6d;
-}
-
-.modal-header {
-  background-color: rgb(190, 76, 41);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.modal-body {
-  color: white;
-}
