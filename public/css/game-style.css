@@ -48,14 +48,14 @@ article {
 }
 
 #user-img {
-	margin-top: 140px;
+	margin-top: 120px;
 	width: 150px;
 	height: auto;
 	
 	}
 
 #boss-img {
-margin-top: 160px;
+margin-top: 140px;
 width: 200px;
 height: auto;
 
@@ -249,7 +249,7 @@ height: auto;
 	margin-top: 50px;
 	/* background-image: url(../images/pixelated_bg6.gif); */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/pixelated_bg6.gif);
-	height: 600px;
+	height: 555px;
 	width: 960px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -312,21 +312,103 @@ img {
 
 }
 
-.modal-content {
+
+.modal {
+	display: none; 
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.7); 
+	justify-content: center;
+	align-items: center;
+  }
+  
+ 
+  .modal-content {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	text-align: center;
+	max-width: 400px;
+	width: 80%;
+	margin: auto;
+	position: relative;
+  }
+  
+  /* Close button */
+  .close-button {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+	color: #000;
+	text-decoration: none;
+  }
+  
+  /* Modal message */
+  #modalMessage {
+	margin-bottom: 20px;
+	font-size: 24px;
+  }
+  
+  /* Next button */
+  #modalNextBtn {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #28a745; /* Green */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  #modalNextBtn:hover {
+	background-color: #218838;
+  }
+
+  .modal-content{
 	background: #6d6d6d;
   }
   
-  .modal-header {
+  .modal-header{
 	background-color: rgb(190, 76, 41);
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   
-  .modal-body {
-	color: white;
+  .modal-body{
+	color:white;
   }
 
-  /* From Uiverse.io by Voxybuns */ 
-button {
+  .modal-backdrop {
+	z-index: 1040 !important;
+  }
+  
+  .modal {
+	z-index: 1050 !important;
+  }
+  
+  .custom-modal {
+	position: relative;
+	z-index: 1051; /* Ensures buttons and header are clickable */
+  }
+  
+  
+  .controls-bar {
+	margin-top: -44px;
+  }
+
+.controls {
 	/* Variables */
 	--button_radius: 0.75em;
 	--button_color: #e8e8e8;
@@ -363,12 +445,12 @@ button {
 
   }
   
-  button:hover .button_top {
+  .controls:hover .button_top {
 	/* Pull the button upwards when hovered */
 	transform: translateY(-0.33em);
   }
   
-  button:active .button_top {
+  .controls:active .button_top {
 	/* Push the button downwards when pressed */
 	transform: translateY(0);
   }
@@ -388,6 +470,57 @@ button {
 		width: 70px;
 	
 	}
+
+	.controls-bar {
+		margin-top: 0px;
+	  }
+
+	  .controls {
+		/* Variables */
+		--button_radius: 0.75em;
+		--button_color: #e8e8e8;
+		--button_outline_color: #000000;
+	
+		font-weight: bold;
+		border: none;
+		cursor: pointer;
+		border-radius: var(--button_radius);
+		background: var(--button_outline_color);
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 15px;
+		max-width: 130px;
+		align-items: center !important;
+		
+		margin-left: 15px;
+		margin-right: 15px;
+	  }
+	  
+	  .button_top {
+		display: block;
+		box-sizing: border-box;
+		border: 2px solid var(--button_outline_color);
+		border-radius: var(--button_radius);
+		/* padding: 0.75em 1.5em; */
+		background: var(--button_color);
+		color: var(--button_outline_color);
+		transform: translateY(-0.2em);
+		transition: transform 0.1s ease;
+		max-width: 130px;
+		align-items: center !important;
+	
+	  }
+	  
+	  .controls:hover .button_top {
+		/* Pull the button upwards when hovered */
+		transform: translateY(-0.33em);
+	  }
+	  
+	  .controls:active .button_top {
+		/* Push the button downwards when pressed */
+		transform: translateY(0);
+	  }
 	
 	#potion {
 		color: black;
