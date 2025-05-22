@@ -166,7 +166,11 @@ $(document).ready(function () {
   $("#modalNextBtn").click(function () {
     $("#resultModal").fadeOut(300, restartGame);
   });
-  
+
+  // Ensure modal is hidden on first load
+  $("#resultModal").hide();
+
   // Initialize game
   renderGame();
+
 });
