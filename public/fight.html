@@ -120,7 +120,7 @@
 
                 </div> -->
 
-                <div class="row justify-content-center align-items-center full-height">
+                <div class="row justify-content-center align-items-center full-height controls-bar">
                     <div id="turn-indicator">🟢 Your Turn!</div>
 
                     <!-- <button id="attack">Attack <img class="ability" src="images/sword.png" alt="attack"></button>
@@ -128,26 +128,26 @@
                     </button> -->
 
                     <!-- <button id="special">Special <img class="ability" src="images/special.png" alt="magic"></button> -->
-                    <button id="attack">
+                    <div class="controls" id="attack">
                         <span class="button_top">Attack
                             <img src="images/sword.png" alt="icon" class="ability">
 
                         </span>
-                    </button>
+                    </div>
 
-                    <button id="potion">
+                    <div class="controls" id="potion">
                         <span class="button_top">Potion
                             <img src="images/potion.png" alt="icon" class="ability">
 
                         </span>
-                    </button>
+                    </div>
 
-                    <button id="special">
+                    <div class="controls" id="special">
                         <span class="button_top">Special
                             <img src="images/special.png" alt="icon" class="ability">
 
                         </span>
-                    </button>
+                    </div>
 
 
 
@@ -165,7 +165,7 @@
 
     <br><br><br><br>
 
-    <div id="resultModal" style="display: none;">
+    <!-- <div id="resultModal" style="display: none;">
         <div class="modal-content">
             <span id="closeModal" class="close">×</span>
             <p id="modalMessage">You win!</p>
@@ -173,7 +173,7 @@
             <button id="modalNextBtn"><a href="index.html">Home</a>
             </button>
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer class="text-white text-center text-lg-start p-3">
@@ -194,7 +194,7 @@
     </footer>
 
     <!-- Modal -->
-    <div id="resultModal" class="modal">
+    <!-- <div id="resultModal" class="modal">
         <div class="modal-content">
             <span id="closeModal" class="close">&times;</span>
             <p id="modalMessage"></p>
@@ -202,11 +202,48 @@
             <button id="modalNextBtn"><a href="index.html">Home</a>
             </button>
         </div>
+    </div> -->
+
+    <!-- Modal -->
+<!-- <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="modalMessage">Game Over</h2>
+      <button id="modalNextBtn">Play Again</button>
     </div>
+  </div> -->
+
+  
+  <!-- Game Over Modal -->
+  <div class="modal fade" id="game-modal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gameModalLabel">Game Over</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Better luck next time!
+        </div>
+        <div class="modal-footer">
+          <button id="try-again-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+          <a id="next-game-btn" href="index.html" class="btn btn-success" style="display: none;">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="js/bossfight.js"></script>
+
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
 </body>
 
 </html>
