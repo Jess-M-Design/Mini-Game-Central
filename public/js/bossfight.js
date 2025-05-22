@@ -45,13 +45,67 @@ $(document).ready(function () {
   }
 
   function showResult(message, won) {
-    $("#modalMessage").text(message);
-    $("#modalNextBtn").toggle(won); // Only show next button if won
-    $("#resultModal").fadeIn();
+    const modal = new bootstrap.Modal(document.getElementById('game-modal'));
+    const modalBody = document.querySelector("#game-modal .modal-body");
+    const nextBtn = document.getElementById("next-game-btn");
+    const tryAgainBtn = document.getElementById("try-again-btn");
   
-    // Disable buttons after win/loss
+    modalBody.textContent = message;
+  
+    // Toggle visibility of buttons
+    if (won) {
+      nextBtn.style.display = "inline-block";
+      tryAgainBtn.style.display = "none";
+    } else {
+      nextBtn.style.display = "none";
+      tryAgainBtn.style.display = "inline-block";
+    }
+  
+    modal.show();
+  
+    // Disable game buttons
     setButtonsEnabled(false);
   }
+  
+  // Reset game when "Try Again" is clicked
+  document.getElementById("try-again-btn").addEventListener("click", function () {
+    restartGame();
+  });
+  
+
+  function restartGame() {
+    user.hp = 100;
+    user.coins = 5;
+    boss.hp = 200;
+    isPlayerTurn = true;
+  
+    setButtonsEnabled(true);
+    renderGame();
+  }
+  
+
+// Event listeners for modal interactions
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("resultModal");
+  const closeButton = document.querySelector(".close-button");
+  const modalNextBtn = document.getElementById("modalNextBtn");
+
+  // Close modal when clicking the close button
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Restart game when clicking the "Play Again" button
+  modalNextBtn.addEventListener("click", restartGame);
+});
+
   
 
   function restartGame() {

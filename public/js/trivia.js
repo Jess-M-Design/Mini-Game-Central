@@ -132,11 +132,11 @@ $(document).ready(function () {
         questionTimer.stop();
         questionTimer.reset();
         timeIsUp = 0;
-        $("#time").empty().css("background", "transparent"); // ✅ Fix here
+        $("#time").empty().css("background", "transparent"); 
         $("#questions").html("<h3>Correct!</h3>");
         $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
         $('#result').show().html("You have chosen... Wisely! You will now advance to the next question.");
-        timeIsUp = setTimeout(advance, 1000);
+        timeIsUp = setTimeout(advance, 2000); // duration (1 sec = 1000)
       }
       
 
@@ -146,12 +146,12 @@ $(document).ready(function () {
         questionTimer.stop();
         questionTimer.reset();
         timeIstUp = 0;
-        $("#time").empty().css("background", "transparent"); // ✅ Fix here
+        $("#time").empty().css("background", "transparent"); 
         $("#questions").html("<h3>Incorrect!</h3>");
         $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
         $('#result').show().html("You have chosen... Poorly! You did not earn a point, prepare for the next question.");
 
-        timeIsUp = setTimeout(advance, 1 * 1000);
+        timeIsUp = setTimeout(advance, 1 * 2000); // duration (1 sec = 1000)
     }
 
     function timesUp() {
@@ -172,27 +172,57 @@ $(document).ready(function () {
         $("#questions, #result").empty().hide();
         $("#time").html("<h2>Great job!</h2>");
     
-        $(".modal-text").html("Your Results <br><br>Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
+        $(".modal-text").html("Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
     
-        // Lock the modal so it can't be dismissed by clicking outside
+        let modalButtons = "";
+    
+        // Define win condition (you can customize this logic)
+        const wonGame = right > wrong && right >= 3;
+    
+        if (wonGame) {
+            modalButtons = `
+                <button id="play-again" class="btn btn-primary">Play Again</button>
+                <button id="next-game" class="btn btn-success">Next Game</button>
+            `;
+        } else {
+            modalButtons = `<button id="continue" class="btn btn-primary">Play Again</button>`;
+        }
+    
+        $(".modal-footer").html(modalButtons); // Assuming your modal has a .modal-footer
+    
+        // Event for replaying the same game
+        $(document).off("click", "#play-again").on("click", "#play-again", function () {
+            $("#game-modal").modal("hide");
+            $("#time, #questions, #result").fadeOut(300, function () {
+                startTrivia(); // Restart current game
+                $("#time, #questions, #result").fadeIn(300);
+            });
+        });
+    
+        // Event for playing the next game
+        $(document).off("click", "#next-game").on("click", "#next-game", function () {
+            window.location.href = "hangman.html";
+        });
+        
+    
+        // Fallback for loss (continue = play again)
+        $(document).off("click", "#continue").on("click", "#continue", function () {
+            $("#game-modal").modal("hide");
+            $("#time, #questions, #result").fadeOut(300, function () {
+                startTrivia();
+                $("#time, #questions, #result").fadeIn(300);
+            });
+        });
+    
+        // Lock modal behavior
         $("#game-modal").modal({
             backdrop: 'static',
             keyboard: false
         });
     
-        $(document).off("click", "#continue").on("click", "#continue", function () {
-            $("#game-modal").modal("hide");
-        
-            // Fade out content
-            $("#time, #questions, #result").fadeOut(300, function () {
-                startTrivia(); // Reset game
-                $("#time, #questions, #result").fadeIn(300); // Fade back in
-            });
-        });
-        
-    
         $("#game-modal").modal("show");
     }
+    
     
     
 
