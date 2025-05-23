@@ -312,6 +312,29 @@ img {
 
 }
 
+nav {
+	width: 100%;
+	background-color: #333; /* or any color you want */
+	color: white;
+	padding: 15px 20px;
+	position: fixed; /* optional if you want it to stay on top */
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+	nav {
+	  flex-direction: column; /* stack items vertically if needed */
+	  padding: 10px;
+	}
+  }
+
+  
 
 .modal {
 	display: none; 
@@ -330,7 +353,7 @@ img {
  
   .modal-content {
 	background-color: #fff;
-	padding: 30px;
+	/* padding: 30px; */
 	border-radius: 10px;
 	text-align: center;
 	max-width: 400px;
@@ -529,7 +552,7 @@ img {
 		border-radius: 15px;
 		max-width: 100px;
 		align-items: center !important;
-		background-color: #ffffff;
+		background-color: black;
 		margin-left: 5px;
 		margin-right: 5px;
 	}
@@ -541,7 +564,7 @@ img {
 		border-radius: 15px;
 		max-width: 100px;
 		align-items: center !important;
-		background-color: #ffffff;
+		background-color: black;
 		margin-left: 5px;
 		margin-right: 5px;
 	
@@ -554,7 +577,7 @@ img {
 		border-radius: 15px;
 		max-width: 100px;
 		align-items: center !important;
-		background-color: #ffffff;
+		background-color: black;
 		margin-left: 5px;
 		margin-right: 5px;
 	}
@@ -567,7 +590,7 @@ img {
 	}
 
 	#user-img {
-		margin-top: 130px;
+		margin-top: 100px;
 		width: 140px;
 		height: auto;
 	}
