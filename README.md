@@ -1,6 +1,9 @@
 # Mini Game Central
 
-- Enjoy a few of my mini games!
+- Crystal Collector
+- Trivia
+- Hangman
+- Boss Fight
 
 ![jess-m-design github io_Mini-Game-Central_public_index html (2)](https://github.com/user-attachments/assets/3a4825d8-02f6-40d3-88d3-ac29c48c03e2)
 
@@ -9,7 +12,7 @@ Mini Game Central is a browser-based arcade hub built to deliver quick, engaging
 Goals
 - Create a centralized, user-friendly interface for hosting multiple mini-games.
 
-= Prioritize responsive design to ensure seamless access across desktop and mobile devices.
+- Prioritize responsive design to ensure seamless access across desktop and mobile devices.
 
 - Implement consistent visual branding across game tiles and modals.
 
@@ -19,6 +22,7 @@ Goals
 
 ## 🎯 Target Audience
 Casual web users looking for fun, lightweight, and accessible games without the need for downloads or accounts. Ideal for short breaks or sparking creativity through play.
+
 
 ### Features
 - Interactive Game Cards: Each game is displayed with an animated tile that draws attention but doesn’t overwhelm.
@@ -77,12 +81,6 @@ Mini Game Central is a fun, interactive project that reflects my ability to comb
 
 
 ## 🔗 Visit Live Site
-👉 Mini Game Central
-
-## Technologies Used:
-- HTML, CSS, Javascript, Modal, Bootstrap
-
-## Live link:
-- link: https://Jess-M-Design.github.io/Mini-Game-Central/public/index.html
+👉 link: https://Jess-M-Design.github.io/Mini-Game-Central/public/index.html
 
 
