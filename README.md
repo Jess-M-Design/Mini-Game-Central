@@ -1,6 +1,6 @@
 # Mini Game Central
 
-Games: Crystal Collector - Trivia - Hangman - Boss Fight
+Crystal Collector - Trivia - Hangman - Boss Fight
 
 ![jess-m-design github io_Mini-Game-Central_public_index html (2)](https://github.com/user-attachments/assets/3a4825d8-02f6-40d3-88d3-ac29c48c03e2)
 
