@@ -47,17 +47,17 @@
         </div>
     </nav>
 
+    <div class="overall">
 
+        <br>
+        <div class="container d-flex justify-content-center align-items-center full-height">
+            <div class="text-center">
+                <h3 class="display-4">Let's Play Trivia</h3>
+                <p class="lead">This game is a simple Trivia Game. I hope you know a lot about code! Plot twist, you are
+                    timed. Good Luck!!</p>
 
-    <br>
-    <div class="container d-flex justify-content-center align-items-center full-height">
-        <div class="text-center">
-            <h3 class="display-4">Let's Play Trivia</h3>
-            <p class="lead">This game is a simple Trivia Game. I hope you know a lot about code! Plot twist, you are
-                timed. Good Luck!!</p>
-
+            </div>
         </div>
-    </div>
 
 
 
@@ -67,94 +67,99 @@
 
 
 
-    <div class="container ">
-        <div class="row center ">
-            <div class="bgTest ">
+        <div class="container ">
+            <div class="row center ">
+                <div class="bgTest ">
 
-                <div class="row-header" id="game-wrapper">
-                    <br>
-                  
-                 
-                    <div class=" row justify-content-center text-center">
-                        <div id="time"></div>
-                    </div>
-                    <br>
-                    <div class=" row justify-content-center text-center">
-                        <div id="questions"></div>
-                    </div>
-                    <br>
-                    <!-- answers -->
-                    <div class="answers row justify-content-center text-center">
-                        <div id="answer0" class="answer-button col-6 col-sm-4 col-md-3" value="0">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <span class="front text"></span>
+                    <div class="row-header" id="game-wrapper">
+                        <br>
+
+
+                        <div class=" row justify-content-center text-center">
+                            <div id="time"></div>
                         </div>
-                        <!-- <br> -->
-                        <div id="answer1" class="answer-button col-6 col-sm-4 col-md-3 " value="1">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <span class="front text"></span>
+                        <br>
+                        <div class=" row justify-content-center text-center">
+                            <div id="questions"></div>
                         </div>
-                        <!-- <br> -->
-                        <div id="answer2" class="answer-button col-6 col-sm-4 col-md-3 " value="2">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <span class="front text"></span>
-                        </div>
-                        <!-- <br> -->
-                        <div id="answer3" class="answer-button col-6 col-sm-4 col-md-3" value="3">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <span class="front text"></span>
-                        </div>
-                        <!-- <br> -->
+                        <br>
+                        <!-- answers -->
+                        <div class="answers row justify-content-center text-center">
+                            <div id="answer0" class="answer-button col-6 col-sm-4 col-md-3" value="0">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"></span>
+                            </div>
+                            <!-- <br> -->
+                            <div id="answer1" class="answer-button col-6 col-sm-4 col-md-3 " value="1">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"></span>
+                            </div>
+                            <!-- <br> -->
+                            <div id="answer2" class="answer-button col-6 col-sm-4 col-md-3 " value="2">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"></span>
+                            </div>
+                            <!-- <br> -->
+                            <div id="answer3" class="answer-button col-6 col-sm-4 col-md-3" value="3">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"></span>
+                            </div>
+                            <!-- <br> -->
 
-                    </div>
-                    <div class=" row justify-content-center text-center">
-                        <div id="result"></div>
+                        </div>
+                        <div class=" row justify-content-center text-center">
+                            <div id="result"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="game-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered"> <!-- Add this class -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Game Results</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <!-- Results text will go here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button id="continue" class="btn btn-primary">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="game-modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered"> <!-- Add this class -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Game Results</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body modal-text">
-              <!-- Results text will go here -->
-            </div>
-            <div class="modal-footer">
-              <button id="continue" class="btn btn-primary">Play Again</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-
-    
-
-      <!-- Footer -->
-      <footer class="text-white text-center text-lg-start p-3">
+    <!-- Footer -->
+    <footer class="text-white text-center text-lg-start p-3">
         <div class="container py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <span>&copy; Jess M. Design 2025</span>
+            <a href="https://jess-m-design.com" class="text-white me-3" aria-label="website - Jess M Design">Jess M.
+                Design<span>&copy; 2025
+            </a>
+            </span>
             <div class="my-3">
                 <a href="https://github.com/Jess-M-Design" class="text-white me-3" aria-label="GitHub - Jess M Design">
                     <i class="fa-brands fa-github fa-xl"></i></a>
                 <a href="https://dribbble.com/J_M_Design" class="text-white me-3" aria-label="Dribbble - Jess M Design">
                     <i class="fa-brands fa-dribbble fa-xl"></i></a>
-                <a href="https://www.instagram.com/jess_m_design" class="text-white me-3" aria-label="Instagram - Jess M Design">
+                <a href="https://www.instagram.com/jess_m_design" class="text-white me-3"
+                    aria-label="Instagram - Jess M Design">
                     <i class="fa-brands fa-instagram fa-xl"></i></a>
-                <a href="https://www.linkedin.com/company/jess-m-design/" class="text-white me-3" aria-label="LinkedIn - Jess M Studio">
+                <a href="https://www.linkedin.com/company/jess-m-design/" class="text-white me-3"
+                    aria-label="LinkedIn - Jess M Studio">
                     <i class="fa-brands fa-linkedin fa-xl"></i></a>
                 <a href="https://www.behance.net/jess_m_design" class="text-white" aria-label="Behance - Jess M Design">
                     <i class="fa-brands fa-behance fa-xl"></i></a>
@@ -164,7 +169,7 @@
 
 
 
-  
+
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/trivia.js"></script>
