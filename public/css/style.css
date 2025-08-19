@@ -1,18 +1,18 @@
-body {
-  padding-top: 90px; /* for navbar */
 
-}
 
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
-body {
-  background: #6d6d6d;
+body {background-color: firebrick !important;
 }
 
-
+.overall {
+    background: #6d6d6d;
+    padding-top: 90px;
+     padding-bottom: 90px;
+}
 
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
