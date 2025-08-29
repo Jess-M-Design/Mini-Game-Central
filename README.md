@@ -67,15 +67,6 @@ The hover animations stretch game tiles to the right and dynamically shift surro
 Mini Game Central is a fun, interactive project that reflects my ability to combine visual design with JavaScript-based game logic. The platform is currently live and open to further additions, including more games, themes, and accessibility improvements.
 
 
-## 🚀 Next Steps
-
-- Expand the game library with multiplayer or puzzle-based challenges.
-
-- Integrate local storage to track scores or user progress.
-
-- Refactor to use vanilla JS or a modern front-end framework like React.
-
-
 
 ## 🔗 Visit Live Site
 👉 link: https://Jess-M-Design.github.io/Mini-Game-Central/public/index.html
